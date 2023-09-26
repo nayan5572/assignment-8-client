@@ -10,6 +10,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ProductDetails from './components/ProductDetails/ProductDetails';
+// import DonationDetails from './components/DonationDetails/DonationDetails';
 
 const router = createBrowserRouter([
   {
@@ -22,15 +24,21 @@ const router = createBrowserRouter([
       },
       {
         path: '/donation',
-        element: <Donation></Donation>
+        element: <Donation></Donation>,
+        loader: () => fetch('/donate.json')
       },
       {
         path: '/statistics',
         element: <Statistics></Statistics>
       },
       {
-        path: '/category/:id',
+        path: '/category',
         element: <CategoryList></CategoryList>
+      },
+      {
+        path: '/proDetails/:id',
+        element: <ProductDetails></ProductDetails>,
+        loader: ()=> fetch('/donate.json')
       }
     ]
   },

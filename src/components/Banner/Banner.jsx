@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
         <section>
-            <div className="mt-28 py-52">
+            <div className="pt-16 pb-64">
                 <h2 className="text-5xl font-bold text-center">I Grow By Helping People In Need</h2>
                 <div className="form-control mt-10">
                     <div className="input-group flex justify-center">
