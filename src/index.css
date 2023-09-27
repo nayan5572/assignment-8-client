@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+ /* this css is for navbar active color  */
 .active{
     color: #FF444A;
     text-decoration: underline;
