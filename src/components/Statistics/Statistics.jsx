@@ -1,12 +1,7 @@
-// import { useLoaderData } from 'react-router-dom';
 import { PieChart, Pie, Cell } from 'recharts';
-import { getStorageProductApplication, saveProductApplication } from '../../utility/utility';
+import { useLoaderData } from 'react-router-dom';
+import { getStorageProductApplication } from '../../utility/utility';
 
-
-// const data = [
-//     { name: 'Group A', value: 400 },
-//     { name: 'Group B', value: 100 },
-// ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -25,18 +20,21 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 const Statistics = () => {
 
-    const data = [
-        { name: 'Group A', value: 12 },
-        { name: 'Group B', value: 7 },
-    ];
+    const picData = useLoaderData();
+    const localData = getStorageProductApplication();
 
+    const data = [
+        { name: 'Group A', value: picData.length },
+        { name: 'Group B', value: localData.length },
+    ];
+    // console.log(localData, localData);
 
     return (
         <div className=''>
             <PieChart width={1000} height={600}>
                 <Pie
                     data={data}
-                    cx="80%"
+                    cx="50%"
                     cy="50%"
                     labelLine={false}
                     label={renderCustomizedLabel}

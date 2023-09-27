@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Banner from './components/Banner/Banner';
 // import DonationDetails from './components/DonationDetails/DonationDetails';
 
 const router = createBrowserRouter([
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: '/proDetails/:id',
         element: <ProductDetails></ProductDetails>,
+        loader: ()=> fetch('/donate.json')
+      },
+      {
+        path: '/banner/:id',
+        element: <Banner></Banner>,
         loader: ()=> fetch('/donate.json')
       }
     ]

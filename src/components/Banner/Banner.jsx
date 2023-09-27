@@ -1,5 +1,9 @@
+// import { useLoaderData } from "react-router-dom";
 
 const Banner = () => {
+    // const findData = useLoaderData();
+
+
     return (
         <section>
             <div className="pt-16 pb-64">
