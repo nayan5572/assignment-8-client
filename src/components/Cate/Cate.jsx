@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const Cate = ({ cate }) => {
 
@@ -20,5 +21,14 @@ const Cate = ({ cate }) => {
         </Link>
     );
 };
+
+Cate.propTypes = {
+    cate: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+  };
 
 export default Cate;

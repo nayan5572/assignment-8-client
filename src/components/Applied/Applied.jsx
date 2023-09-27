@@ -1,6 +1,8 @@
+import PropTypes from "prop-types"; // Import PropTypes
+
+
 const Applied = ({ product }) => {
     
-
     const categorybgColor = product.category_bg_color;
     const cartbgColor = product.card_bg_color;
     const textColor = product.text_bg_color;
@@ -17,5 +19,14 @@ const Applied = ({ product }) => {
         </div>
     );
 };
+
+Applied.propTypes = {
+    product: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+  };
 
 export default Applied;
