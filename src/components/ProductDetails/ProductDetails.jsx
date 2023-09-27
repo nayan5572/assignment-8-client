@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
-import 'sweetalert2/src/sweetalert2.scss'
+import 'sweetalert2/src/sweetalert2.scss';
 import { saveProductApplication } from "../../utility/utility";
 
 const ProductDetails = () => {
@@ -27,9 +27,9 @@ const ProductDetails = () => {
     return (
         <div className="">
             <div className="relative">
-                <img src={item.picture} alt="Image" className="w-full h-auto" />
-                <div className="absolute inset-x-0 bottom-0 bg-black opacity-50 h-36"></div>
-                <div className="absolute bottom-0 left-0 right-0 py-9">
+                <img src={item.picture} alt="Image" className="w-[1320px] h-[700px] mx-auto" />
+                <div className="absolute inset-x-0 bottom-0 bg-black opacity-50 h-36 w-[1320px] mx-auto"></div>
+                <div className="absolute bottom-0 left-28 right-0 py-9">
                     <button onClick={handleSweetAlert} style={{backgroundColor: textColor}} className="rounded-lg ml-9 py-4 px-6 text-white">Donate ${item.price}</button>
                 </div>
             </div>

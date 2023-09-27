@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import { saveProductApplication } from "../../utility/utility";
 
 const Cate = ({ cate }) => {
 
@@ -8,14 +7,6 @@ const Cate = ({ cate }) => {
     const categorybgColor = cate.category_bg_color;
     const cartbgColor = cate.card_bg_color;
     const textColor = cate.text_bg_color;
-
-
-
-    // handle click add to donation
-    // const handleAdtoDonate = () => {
-    //     saveProductApplication(cate);
-    //     console.log('Clicking Work', cate);
-    // }
 
     return (
         <Link to={`/proDetails/${id}`}>

@@ -35,7 +35,9 @@ const Donation = () => {
                 }
             </div>
             <div className="mt-10 mb-4 text-center">
-                <button onClick={()=> setDataLength(dataLength.length)} className="bg-[#009444] py-4 px-7 rounded-lg font-semibold text-white">See All</button>
+                <div className={dataLength === item.length && 'hidden'}>
+                    <button onClick={() => setDataLength(dataLength.length)} className="bg-[#009444] py-4 px-7 rounded-lg font-semibold text-white">See All</button>
+                </div>
             </div>
         </div>
     );
